@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DYN</title>
+	<!--dynamic part-->
+	<script type="text/javascript" src="/jspm_packages/system.js"></script>
+	<script type="text/javascript" src="/jspm.config.js"></script>
+	<script type="text/javascript">
+	System.import('application').then(function () {
+		console.log('application loaded.');
+	}, function (e) {
+		console.log('application load failed:\n%c%s', 'color:red', e.stack);
+	});
+	</script>
+	<!--dynamic part-->
+</head>
+<body></body>
+</html>

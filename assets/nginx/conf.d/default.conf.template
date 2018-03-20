@@ -1,0 +1,14 @@
+server {
+	listen ${LISTEN_PORT} default_server;
+	server_name _;
+	
+	root "${PROJECT_ROOT}/dist";
+	index index.dynamic.html;
+	
+	include "log/${OUTPUT_TYPE}.conf";
+	
+	location ^~ /node_modules {
+		alias "${PROJECT_ROOT}/node_modules";
+	}
+	location ~ ^/[^\/]*$ { root "${PROJECT_ROOT}/assets"; }
+}

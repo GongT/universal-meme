@@ -1,0 +1,46 @@
+{
+	"name": "universal-meme",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "bash scripts/build.sh",
+		"start": "bash scripts/start.sh",
+		"postinstall": "bash scripts/post-install.sh"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GongT/universal-meme.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/GongT/universal-meme/issues"
+	},
+	"homepage": "https://github.com/GongT/universal-meme#readme",
+	"dependencies": {
+		"@types/jquery": "^3.3.1",
+		"concurrently": "^3.5.1",
+		"jspm": "^0.17.0-beta.47",
+		"node-sass": "^4.7.2",
+		"typescript": "^2.7.2"
+	},
+	"jspm": {
+		"name": "application",
+		"main": "index.js",
+		"directories": {
+			"packages": "dist/jspm_packages"
+		},
+		"configFiles": {
+			"jspm": "assets/jspm.config.js"
+		},
+		"dependencies": {
+			"jquery": "npm:jquery@^3.3.1"
+		},
+		"overrides": {
+			"npm:jquery@3.3.1": {
+				"format": "amd"
+			}
+		}
+	}
+}

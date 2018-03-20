@@ -1,0 +1,6 @@
+import * as $ from 'jquery';
+
+$(() => {
+
+});
+
