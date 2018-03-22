@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DYN</title>
-	<!--dynamic part-->
-	<script type="text/javascript" src="/jspm_packages/system.js"></script>
-	<script type="text/javascript" src="/jspm.config.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Universal Meme Image Creator</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="mainContainer">
+	<div class="toolBox">
+		<div class="leftPanel"></div>
+		<div class="rightPanel"></div>
+	</div>
+	<div class="mainStage">
+		<canvas id="MainCanvas"></canvas>
+	</div>
+</div>
+<!-- [[dynamic part -->
+<div title="这里是JS" style="display:none!important;">
+	<script type="text/javascript" src="jspm_packages/system.js"></script>
+	<script type="text/javascript" src="jspm.config.js"></script>
 	<script type="text/javascript">
 	System.import('application').then(function () {
 		console.log('application loaded.');
@@ -12,7 +28,7 @@
 		console.log('application load failed:\n%c%s', 'color:red', e.stack);
 	});
 	</script>
-	<!--dynamic part-->
-</head>
-<body></body>
+</div>
+<!-- dynamic part]] -->
+</body>
 </html>

@@ -1,0 +1,22 @@
+.switch {
+	background: #ffa19d;
+	display: flex;
+	flex-direction: column;
+	
+	> .buttons {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		> li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			flex-grow: 1;
+		}
+	}
+	> div {
+		flex-grow: 1;
+	}
+}

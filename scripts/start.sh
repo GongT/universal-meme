@@ -3,17 +3,18 @@
 export OUTPUT_TYPE=debug
 source scripts/lib.sh
 
-SASS_COMMAND=$(echo "
-node-sass
+SASS_COMMAND="
+node-sass-chokidar
 --watch
 --recursive
---output dist/css
---source-map
 --source-map-contents
 --output-style nested
 --indent-type tab
+--source-map dist/css
+--output dist/css
 styles
-")
+"
+SASS_COMMAND="$(echo ${SASS_COMMAND})"
 
 if [ ! -e output.fifo ]; then
 	mkfifo output.fifo
@@ -30,6 +31,5 @@ concurrently --kill-others \
 	"$SASS_COMMAND" \
 	"nginx -c '${PROJECT_ROOT}/assets/nginx/nginx.conf'" \
 	"while true ; do cat output.fifo ; done"
-
 
 true

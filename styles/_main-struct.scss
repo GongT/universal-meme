@@ -1,0 +1,50 @@
+.mainContainer {
+	position: absolute;
+	overflow: hidden;
+	
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: row;
+	
+	> .toolBox {
+		display: flex;
+		width: 40%;
+		min-width: 360px;
+		flex-direction: row;
+		
+		> .leftPanel {
+			flex-grow: 1;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		> .rightPanel {
+			background: #9bffac;
+			flex-grow: 1;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		
+		@media (max-width: 1366px) {
+			width: 20%;
+			max-width: 360px;
+			min-width: 240px;
+			flex-direction: column;
+		}
+	}
+	> .mainStage {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		
+		> #MainCanvas {
+			margin: auto;
+			box-shadow: black 0 0 5px;
+		}
+	}
+}
